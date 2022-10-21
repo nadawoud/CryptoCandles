@@ -56,15 +56,23 @@
 		618F75E4290252C9001D004D /* CryptoCandles */ = {
 			isa = PBXGroup;
 			children = (
-				618F75E5290252C9001D004D /* AppDelegate.swift */,
-				618F75E7290252C9001D004D /* SceneDelegate.swift */,
+				618F75F92902537B001D004D /* Supporting Files */,
 				618F75E9290252C9001D004D /* ViewController.swift */,
 				618F75EB290252C9001D004D /* Main.storyboard */,
-				618F75EE290252C9001D004D /* Assets.xcassets */,
-				618F75F0290252C9001D004D /* LaunchScreen.storyboard */,
 				618F75F3290252C9001D004D /* Info.plist */,
 			);
 			path = CryptoCandles;
+			sourceTree = "<group>";
+		};
+		618F75F92902537B001D004D /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				618F75E5290252C9001D004D /* AppDelegate.swift */,
+				618F75E7290252C9001D004D /* SceneDelegate.swift */,
+				618F75EE290252C9001D004D /* Assets.xcassets */,
+				618F75F0290252C9001D004D /* LaunchScreen.storyboard */,
+			);
+			path = "Supporting Files";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
