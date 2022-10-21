@@ -19,14 +19,7 @@ enum CryptoCandleEndpoint: Endpoint {
     var baseURL: String {
         switch self {
         default:
-            return "https://fapi.binance.com/fapi/v1"
-        }
-    }
-    
-    var path: String {
-        switch self {
-        case .getCandlestickChartData:
-            return "/klines"
+            return "https://fapi.binance.com/fapi/v1/klines"
         }
     }
     
