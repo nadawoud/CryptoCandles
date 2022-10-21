@@ -15,6 +15,7 @@
 		618F75F2290252C9001D004D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 618F75F0290252C9001D004D /* LaunchScreen.storyboard */; };
 		618F75FC29025603001D004D /* Endpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 618F75FB29025603001D004D /* Endpoint.swift */; };
 		618F75FE290256B6001D004D /* CryptoCandleEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 618F75FD290256B6001D004D /* CryptoCandleEndpoint.swift */; };
+		618F7603290325DC001D004D /* Candlesticks.swift in Sources */ = {isa = PBXBuildFile; fileRef = 618F7602290325DC001D004D /* Candlesticks.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		618F75F3290252C9001D004D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		618F75FB29025603001D004D /* Endpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Endpoint.swift; sourceTree = "<group>"; };
 		618F75FD290256B6001D004D /* CryptoCandleEndpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CryptoCandleEndpoint.swift; sourceTree = "<group>"; };
+		618F7602290325DC001D004D /* Candlesticks.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Candlesticks.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,6 +63,7 @@
 			isa = PBXGroup;
 			children = (
 				618F75F92902537B001D004D /* Supporting Files */,
+				618F7601290325CB001D004D /* Models */,
 				618F75FA290255DA001D004D /* Network */,
 				618F75E9290252C9001D004D /* ViewController.swift */,
 				618F75EB290252C9001D004D /* Main.storyboard */,
@@ -87,6 +90,14 @@
 				618F75FD290256B6001D004D /* CryptoCandleEndpoint.swift */,
 			);
 			path = Network;
+			sourceTree = "<group>";
+		};
+		618F7601290325CB001D004D /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				618F7602290325DC001D004D /* Candlesticks.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -163,6 +174,7 @@
 				618F75FC29025603001D004D /* Endpoint.swift in Sources */,
 				618F75FE290256B6001D004D /* CryptoCandleEndpoint.swift in Sources */,
 				618F75EA290252C9001D004D /* ViewController.swift in Sources */,
+				618F7603290325DC001D004D /* Candlesticks.swift in Sources */,
 				618F75E6290252C9001D004D /* AppDelegate.swift in Sources */,
 				618F75E8290252C9001D004D /* SceneDelegate.swift in Sources */,
 			);
