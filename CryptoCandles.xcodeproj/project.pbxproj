@@ -14,6 +14,7 @@
 		618F75EF290252C9001D004D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 618F75EE290252C9001D004D /* Assets.xcassets */; };
 		618F75F2290252C9001D004D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 618F75F0290252C9001D004D /* LaunchScreen.storyboard */; };
 		618F75FC29025603001D004D /* Endpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 618F75FB29025603001D004D /* Endpoint.swift */; };
+		618F75FE290256B6001D004D /* CryptoCandleEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 618F75FD290256B6001D004D /* CryptoCandleEndpoint.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		618F75F1290252C9001D004D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		618F75F3290252C9001D004D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		618F75FB29025603001D004D /* Endpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Endpoint.swift; sourceTree = "<group>"; };
+		618F75FD290256B6001D004D /* CryptoCandleEndpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CryptoCandleEndpoint.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -82,6 +84,7 @@
 			isa = PBXGroup;
 			children = (
 				618F75FB29025603001D004D /* Endpoint.swift */,
+				618F75FD290256B6001D004D /* CryptoCandleEndpoint.swift */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -158,6 +161,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				618F75FC29025603001D004D /* Endpoint.swift in Sources */,
+				618F75FE290256B6001D004D /* CryptoCandleEndpoint.swift in Sources */,
 				618F75EA290252C9001D004D /* ViewController.swift in Sources */,
 				618F75E6290252C9001D004D /* AppDelegate.swift in Sources */,
 				618F75E8290252C9001D004D /* SceneDelegate.swift in Sources */,
