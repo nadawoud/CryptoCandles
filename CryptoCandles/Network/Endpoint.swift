@@ -12,3 +12,17 @@ protocol Endpoint {
     var path: String { get }
     var parameters: [URLQueryItem] { get }
 }
+
+extension Endpoint {
+    var components: URLComponents {
+        var urlComponent = URLComponents(string: baseURL)
+        urlComponent?.path = path
+        urlComponent?.queryItems = parameters
+
+        return urlComponent!
+    }
+
+    var request: URLRequest {
+        return URLRequest(url: components.url!)
+    }
+}
