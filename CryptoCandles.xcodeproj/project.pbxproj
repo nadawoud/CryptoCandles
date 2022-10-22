@@ -13,6 +13,10 @@
 		618F75ED290252C9001D004D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 618F75EB290252C9001D004D /* Main.storyboard */; };
 		618F75EF290252C9001D004D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 618F75EE290252C9001D004D /* Assets.xcassets */; };
 		618F75F2290252C9001D004D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 618F75F0290252C9001D004D /* LaunchScreen.storyboard */; };
+		618F75FC29025603001D004D /* Endpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 618F75FB29025603001D004D /* Endpoint.swift */; };
+		618F75FE290256B6001D004D /* CryptoCandleEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 618F75FD290256B6001D004D /* CryptoCandleEndpoint.swift */; };
+		618F7600290257C6001D004D /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 618F75FF290257C6001D004D /* NetworkManager.swift */; };
+		618F7603290325DC001D004D /* Candlesticks.swift in Sources */ = {isa = PBXBuildFile; fileRef = 618F7602290325DC001D004D /* Candlesticks.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +28,10 @@
 		618F75EE290252C9001D004D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		618F75F1290252C9001D004D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		618F75F3290252C9001D004D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		618F75FB29025603001D004D /* Endpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Endpoint.swift; sourceTree = "<group>"; };
+		618F75FD290256B6001D004D /* CryptoCandleEndpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CryptoCandleEndpoint.swift; sourceTree = "<group>"; };
+		618F75FF290257C6001D004D /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		618F7602290325DC001D004D /* Candlesticks.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Candlesticks.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,6 +65,8 @@
 			isa = PBXGroup;
 			children = (
 				618F75F92902537B001D004D /* Supporting Files */,
+				618F7601290325CB001D004D /* Models */,
+				618F75FA290255DA001D004D /* Network */,
 				618F75E9290252C9001D004D /* ViewController.swift */,
 				618F75EB290252C9001D004D /* Main.storyboard */,
 				618F75F3290252C9001D004D /* Info.plist */,
@@ -73,6 +83,24 @@
 				618F75F0290252C9001D004D /* LaunchScreen.storyboard */,
 			);
 			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		618F75FA290255DA001D004D /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				618F75FB29025603001D004D /* Endpoint.swift */,
+				618F75FD290256B6001D004D /* CryptoCandleEndpoint.swift */,
+				618F75FF290257C6001D004D /* NetworkManager.swift */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		618F7601290325CB001D004D /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				618F7602290325DC001D004D /* Candlesticks.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -146,7 +174,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				618F7600290257C6001D004D /* NetworkManager.swift in Sources */,
+				618F75FC29025603001D004D /* Endpoint.swift in Sources */,
+				618F75FE290256B6001D004D /* CryptoCandleEndpoint.swift in Sources */,
 				618F75EA290252C9001D004D /* ViewController.swift in Sources */,
+				618F7603290325DC001D004D /* Candlesticks.swift in Sources */,
 				618F75E6290252C9001D004D /* AppDelegate.swift in Sources */,
 				618F75E8290252C9001D004D /* SceneDelegate.swift in Sources */,
 			);
