@@ -25,6 +25,7 @@
 		618F76062903546B001D004D /* Charts in Frameworks */ = {isa = PBXBuildFile; productRef = 618F76052903546B001D004D /* Charts */; };
 		61C198C6290DBE8D00051445 /* CurrenciesListInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61C198C5290DBE8D00051445 /* CurrenciesListInteractor.swift */; };
 		61C198C8290DBF5800051445 /* CurrenciesListPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61C198C7290DBF5800051445 /* CurrenciesListPresenter.swift */; };
+		61C198CA290DCAD300051445 /* CurrencyCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61C198C9290DCAD300051445 /* CurrencyCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -47,6 +48,7 @@
 		618F7602290325DC001D004D /* Candlesticks.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Candlesticks.swift; sourceTree = "<group>"; };
 		61C198C5290DBE8D00051445 /* CurrenciesListInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrenciesListInteractor.swift; sourceTree = "<group>"; };
 		61C198C7290DBF5800051445 /* CurrenciesListPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrenciesListPresenter.swift; sourceTree = "<group>"; };
+		61C198C9290DCAD300051445 /* CurrencyCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,6 +66,7 @@
 		613E0948290DAF08000A7D80 /* CurrenciesList */ = {
 			isa = PBXGroup;
 			children = (
+				61C198C9290DCAD300051445 /* CurrencyCell.swift */,
 				613E0949290DAF54000A7D80 /* CurrenciesListViewController.swift */,
 				61C198C5290DBE8D00051445 /* CurrenciesListInteractor.swift */,
 				61C198C7290DBF5800051445 /* CurrenciesListPresenter.swift */,
@@ -235,6 +238,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				61C198CA290DCAD300051445 /* CurrencyCell.swift in Sources */,
 				618F7600290257C6001D004D /* NetworkManager.swift in Sources */,
 				618F75FC29025603001D004D /* Endpoint.swift in Sources */,
 				613E0945290D7F2F000A7D80 /* CandlestickChartInteractor.swift in Sources */,

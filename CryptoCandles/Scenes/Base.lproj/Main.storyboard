@@ -38,7 +38,7 @@
         <!--Symbols-->
         <scene sceneID="Sza-KK-0Bi">
             <objects>
-                <viewController id="JHb-ig-eAI" customClass="CurrenciesListViewController" customModule="CryptoCandles" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="CurrenciesListViewController" id="JHb-ig-eAI" customClass="CurrenciesListViewController" customModule="CryptoCandles" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="ITQ-31-omY">
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -51,7 +51,7 @@
                                     <constraint firstAttribute="height" constant="135" id="AaU-5r-tNL"/>
                                 </constraints>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="Jir-zX-Af5">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="CurrencyCell" id="Jir-zX-Af5" customClass="CurrencyCell" customModule="CryptoCandles" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="50" width="350" height="43.666667938232422"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Jir-zX-Af5" id="ePk-s2-Xaw">
@@ -84,6 +84,9 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" name="ChartBackground"/>
+                                        <connections>
+                                            <outlet property="currencyLabel" destination="LSi-X7-wYv" id="sXB-is-aTo"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                                 <userDefinedRuntimeAttributes>
@@ -102,6 +105,9 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Symbols" id="rWm-L8-uGl"/>
+                    <connections>
+                        <outlet property="tableView" destination="asL-Jc-sXC" id="AeT-IT-LCZ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4oe-kp-bSN" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -110,7 +116,7 @@
         <!--Chart-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="CandlestickChartViewController" customModule="CryptoCandles" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="CandlestickChartViewController" id="BYZ-38-t0r" customClass="CandlestickChartViewController" customModule="CryptoCandles" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
