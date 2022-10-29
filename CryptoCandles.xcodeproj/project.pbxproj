@@ -7,9 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		613E0945290D7F2F000A7D80 /* CandlestickChartInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 613E0944290D7F2F000A7D80 /* CandlestickChartInteractor.swift */; };
+		613E0947290D829D000A7D80 /* CandlestickChartPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 613E0946290D829D000A7D80 /* CandlestickChartPresenter.swift */; };
 		618F75E6290252C9001D004D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 618F75E5290252C9001D004D /* AppDelegate.swift */; };
 		618F75E8290252C9001D004D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 618F75E7290252C9001D004D /* SceneDelegate.swift */; };
-		618F75EA290252C9001D004D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 618F75E9290252C9001D004D /* ViewController.swift */; };
+		618F75EA290252C9001D004D /* CandlestickChartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 618F75E9290252C9001D004D /* CandlestickChartViewController.swift */; };
 		618F75ED290252C9001D004D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 618F75EB290252C9001D004D /* Main.storyboard */; };
 		618F75EF290252C9001D004D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 618F75EE290252C9001D004D /* Assets.xcassets */; };
 		618F75F2290252C9001D004D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 618F75F0290252C9001D004D /* LaunchScreen.storyboard */; };
@@ -17,13 +19,16 @@
 		618F75FE290256B6001D004D /* CryptoCandleEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 618F75FD290256B6001D004D /* CryptoCandleEndpoint.swift */; };
 		618F7600290257C6001D004D /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 618F75FF290257C6001D004D /* NetworkManager.swift */; };
 		618F7603290325DC001D004D /* Candlesticks.swift in Sources */ = {isa = PBXBuildFile; fileRef = 618F7602290325DC001D004D /* Candlesticks.swift */; };
+		618F76062903546B001D004D /* Charts in Frameworks */ = {isa = PBXBuildFile; productRef = 618F76052903546B001D004D /* Charts */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		613E0944290D7F2F000A7D80 /* CandlestickChartInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CandlestickChartInteractor.swift; sourceTree = "<group>"; };
+		613E0946290D829D000A7D80 /* CandlestickChartPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CandlestickChartPresenter.swift; sourceTree = "<group>"; };
 		618F75E2290252C9001D004D /* CryptoCandles.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CryptoCandles.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		618F75E5290252C9001D004D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		618F75E7290252C9001D004D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		618F75E9290252C9001D004D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		618F75E9290252C9001D004D /* CandlestickChartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CandlestickChartViewController.swift; sourceTree = "<group>"; };
 		618F75EC290252C9001D004D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		618F75EE290252C9001D004D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		618F75F1290252C9001D004D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -39,6 +44,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				618F76062903546B001D004D /* Charts in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -67,8 +73,7 @@
 				618F75F92902537B001D004D /* Supporting Files */,
 				618F7601290325CB001D004D /* Models */,
 				618F75FA290255DA001D004D /* Network */,
-				618F75E9290252C9001D004D /* ViewController.swift */,
-				618F75EB290252C9001D004D /* Main.storyboard */,
+				61DFE4AF290C94F500FF1A3A /* Scenes */,
 				618F75F3290252C9001D004D /* Info.plist */,
 			);
 			path = CryptoCandles;
@@ -103,6 +108,25 @@
 			path = Models;
 			sourceTree = "<group>";
 		};
+		61DFE4AF290C94F500FF1A3A /* Scenes */ = {
+			isa = PBXGroup;
+			children = (
+				618F75EB290252C9001D004D /* Main.storyboard */,
+				61DFE4B0290C94FF00FF1A3A /* CandlestickChart */,
+			);
+			path = Scenes;
+			sourceTree = "<group>";
+		};
+		61DFE4B0290C94FF00FF1A3A /* CandlestickChart */ = {
+			isa = PBXGroup;
+			children = (
+				618F75E9290252C9001D004D /* CandlestickChartViewController.swift */,
+				613E0944290D7F2F000A7D80 /* CandlestickChartInteractor.swift */,
+				613E0946290D829D000A7D80 /* CandlestickChartPresenter.swift */,
+			);
+			path = CandlestickChart;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -119,6 +143,9 @@
 			dependencies = (
 			);
 			name = CryptoCandles;
+			packageProductDependencies = (
+				618F76052903546B001D004D /* Charts */,
+			);
 			productName = CryptoCandles;
 			productReference = 618F75E2290252C9001D004D /* CryptoCandles.app */;
 			productType = "com.apple.product-type.application";
@@ -147,6 +174,9 @@
 				Base,
 			);
 			mainGroup = 618F75D9290252C9001D004D;
+			packageReferences = (
+				618F76042903546B001D004D /* XCRemoteSwiftPackageReference "Charts" */,
+			);
 			productRefGroup = 618F75E3290252C9001D004D /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -176,8 +206,10 @@
 			files = (
 				618F7600290257C6001D004D /* NetworkManager.swift in Sources */,
 				618F75FC29025603001D004D /* Endpoint.swift in Sources */,
+				613E0945290D7F2F000A7D80 /* CandlestickChartInteractor.swift in Sources */,
 				618F75FE290256B6001D004D /* CryptoCandleEndpoint.swift in Sources */,
-				618F75EA290252C9001D004D /* ViewController.swift in Sources */,
+				618F75EA290252C9001D004D /* CandlestickChartViewController.swift in Sources */,
+				613E0947290D829D000A7D80 /* CandlestickChartPresenter.swift in Sources */,
 				618F7603290325DC001D004D /* Candlesticks.swift in Sources */,
 				618F75E6290252C9001D004D /* AppDelegate.swift in Sources */,
 				618F75E8290252C9001D004D /* SceneDelegate.swift in Sources */,
@@ -398,6 +430,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		618F76042903546B001D004D /* XCRemoteSwiftPackageReference "Charts" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/danielgindi/Charts.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 4.1.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		618F76052903546B001D004D /* Charts */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 618F76042903546B001D004D /* XCRemoteSwiftPackageReference "Charts" */;
+			productName = Charts;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 618F75DA290252C9001D004D /* Project object */;
 }
