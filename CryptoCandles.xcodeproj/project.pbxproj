@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		618F75E6290252C9001D004D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 618F75E5290252C9001D004D /* AppDelegate.swift */; };
 		618F75E8290252C9001D004D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 618F75E7290252C9001D004D /* SceneDelegate.swift */; };
-		618F75EA290252C9001D004D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 618F75E9290252C9001D004D /* ViewController.swift */; };
+		618F75EA290252C9001D004D /* CandlestickChartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 618F75E9290252C9001D004D /* CandlestickChartViewController.swift */; };
 		618F75ED290252C9001D004D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 618F75EB290252C9001D004D /* Main.storyboard */; };
 		618F75EF290252C9001D004D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 618F75EE290252C9001D004D /* Assets.xcassets */; };
 		618F75F2290252C9001D004D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 618F75F0290252C9001D004D /* LaunchScreen.storyboard */; };
@@ -24,7 +24,7 @@
 		618F75E2290252C9001D004D /* CryptoCandles.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CryptoCandles.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		618F75E5290252C9001D004D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		618F75E7290252C9001D004D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		618F75E9290252C9001D004D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		618F75E9290252C9001D004D /* CandlestickChartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CandlestickChartViewController.swift; sourceTree = "<group>"; };
 		618F75EC290252C9001D004D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		618F75EE290252C9001D004D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		618F75F1290252C9001D004D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -69,7 +69,6 @@
 				618F75F92902537B001D004D /* Supporting Files */,
 				618F7601290325CB001D004D /* Models */,
 				618F75FA290255DA001D004D /* Network */,
-				618F75E9290252C9001D004D /* ViewController.swift */,
 				618F75EB290252C9001D004D /* Main.storyboard */,
 				618F75F3290252C9001D004D /* Info.plist */,
 			);
@@ -185,7 +184,7 @@
 				618F7600290257C6001D004D /* NetworkManager.swift in Sources */,
 				618F75FC29025603001D004D /* Endpoint.swift in Sources */,
 				618F75FE290256B6001D004D /* CryptoCandleEndpoint.swift in Sources */,
-				618F75EA290252C9001D004D /* ViewController.swift in Sources */,
+				618F75EA290252C9001D004D /* CandlestickChartViewController.swift in Sources */,
 				618F7603290325DC001D004D /* Candlesticks.swift in Sources */,
 				618F75E6290252C9001D004D /* AppDelegate.swift in Sources */,
 				618F75E8290252C9001D004D /* SceneDelegate.swift in Sources */,
