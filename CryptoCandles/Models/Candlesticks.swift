@@ -10,7 +10,7 @@ import Foundation
 enum CandlestickComponent: Codable {
     case integer(Int)
     case string(String)
-
+    
     init(from decoder: Decoder) throws {
         let container = try decoder.singleValueContainer()
         if let x = try? container.decode(Int.self) {
@@ -23,7 +23,7 @@ enum CandlestickComponent: Codable {
         }
         throw DecodingError.typeMismatch(CandlestickComponent.self, DecodingError.Context(codingPath: decoder.codingPath, debugDescription: "Wrong type for ChartElement"))
     }
-
+    
     func encode(to encoder: Encoder) throws {
         var container = encoder.singleValueContainer()
         switch self {
@@ -31,6 +31,16 @@ enum CandlestickComponent: Codable {
             try container.encode(x)
         case .string(let x):
             try container.encode(x)
+        }
+    }
+    
+    func asDouble() -> Double {
+        switch self {
+        case .integer(let component):
+            return Double(component)
+        case .string(let component):
+            guard let double = Double(component) else { return Double(0) }
+            return double
         }
     }
 }
