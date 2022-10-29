@@ -17,6 +17,7 @@
 		618F75FE290256B6001D004D /* CryptoCandleEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 618F75FD290256B6001D004D /* CryptoCandleEndpoint.swift */; };
 		618F7600290257C6001D004D /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 618F75FF290257C6001D004D /* NetworkManager.swift */; };
 		618F7603290325DC001D004D /* Candlesticks.swift in Sources */ = {isa = PBXBuildFile; fileRef = 618F7602290325DC001D004D /* Candlesticks.swift */; };
+		618F76062903546B001D004D /* Charts in Frameworks */ = {isa = PBXBuildFile; productRef = 618F76052903546B001D004D /* Charts */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -39,6 +40,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				618F76062903546B001D004D /* Charts in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -119,6 +121,9 @@
 			dependencies = (
 			);
 			name = CryptoCandles;
+			packageProductDependencies = (
+				618F76052903546B001D004D /* Charts */,
+			);
 			productName = CryptoCandles;
 			productReference = 618F75E2290252C9001D004D /* CryptoCandles.app */;
 			productType = "com.apple.product-type.application";
@@ -147,6 +152,9 @@
 				Base,
 			);
 			mainGroup = 618F75D9290252C9001D004D;
+			packageReferences = (
+				618F76042903546B001D004D /* XCRemoteSwiftPackageReference "Charts" */,
+			);
 			productRefGroup = 618F75E3290252C9001D004D /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -398,6 +406,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		618F76042903546B001D004D /* XCRemoteSwiftPackageReference "Charts" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/danielgindi/Charts.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 4.1.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		618F76052903546B001D004D /* Charts */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 618F76042903546B001D004D /* XCRemoteSwiftPackageReference "Charts" */;
+			productName = Charts;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 618F75DA290252C9001D004D /* Project object */;
 }
