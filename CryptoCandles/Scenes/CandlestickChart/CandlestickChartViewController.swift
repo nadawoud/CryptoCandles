@@ -8,7 +8,7 @@
 import UIKit
 import Charts
 
-protocol CandlestickChartDisplayLogic {
+protocol CandlestickChartDisplayLogic: AnyObject {
     func displayFetchedCandlesticks(_ candlesticks: Candlesticks)
 }
 
