@@ -71,6 +71,9 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Chart" id="SqX-Hx-f2K"/>
+                    <connections>
+                        <outlet property="chartView" destination="pC0-SF-IbM" id="LgX-Lf-V6o"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
