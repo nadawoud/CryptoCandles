@@ -69,7 +69,7 @@
 				618F75F92902537B001D004D /* Supporting Files */,
 				618F7601290325CB001D004D /* Models */,
 				618F75FA290255DA001D004D /* Network */,
-				618F75EB290252C9001D004D /* Main.storyboard */,
+				61DFE4AF290C94F500FF1A3A /* Scenes */,
 				618F75F3290252C9001D004D /* Info.plist */,
 			);
 			path = CryptoCandles;
@@ -102,6 +102,15 @@
 				618F7602290325DC001D004D /* Candlesticks.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		61DFE4AF290C94F500FF1A3A /* Scenes */ = {
+			isa = PBXGroup;
+			children = (
+				618F75EB290252C9001D004D /* Main.storyboard */,
+				61DFE4B0290C94FF00FF1A3A /* CandlestickChart */,
+			);
+			path = Scenes;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
