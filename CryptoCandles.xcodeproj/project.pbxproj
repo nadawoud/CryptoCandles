@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		613E0945290D7F2F000A7D80 /* CandlestickChartInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 613E0944290D7F2F000A7D80 /* CandlestickChartInteractor.swift */; };
 		618F75E6290252C9001D004D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 618F75E5290252C9001D004D /* AppDelegate.swift */; };
 		618F75E8290252C9001D004D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 618F75E7290252C9001D004D /* SceneDelegate.swift */; };
 		618F75EA290252C9001D004D /* CandlestickChartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 618F75E9290252C9001D004D /* CandlestickChartViewController.swift */; };
@@ -21,6 +22,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		613E0944290D7F2F000A7D80 /* CandlestickChartInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CandlestickChartInteractor.swift; sourceTree = "<group>"; };
 		618F75E2290252C9001D004D /* CryptoCandles.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CryptoCandles.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		618F75E5290252C9001D004D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		618F75E7290252C9001D004D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -113,6 +115,15 @@
 			path = Scenes;
 			sourceTree = "<group>";
 		};
+		61DFE4B0290C94FF00FF1A3A /* CandlestickChart */ = {
+			isa = PBXGroup;
+			children = (
+				618F75E9290252C9001D004D /* CandlestickChartViewController.swift */,
+				613E0944290D7F2F000A7D80 /* CandlestickChartInteractor.swift */,
+			);
+			path = CandlestickChart;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -192,6 +203,7 @@
 			files = (
 				618F7600290257C6001D004D /* NetworkManager.swift in Sources */,
 				618F75FC29025603001D004D /* Endpoint.swift in Sources */,
+				613E0945290D7F2F000A7D80 /* CandlestickChartInteractor.swift in Sources */,
 				618F75FE290256B6001D004D /* CryptoCandleEndpoint.swift in Sources */,
 				618F75EA290252C9001D004D /* CandlestickChartViewController.swift in Sources */,
 				618F7603290325DC001D004D /* Candlesticks.swift in Sources */,
