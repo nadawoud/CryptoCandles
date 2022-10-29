@@ -17,12 +17,33 @@ class CandlestickChartViewController: UIViewController {
     @IBOutlet var chartView: CandleStickChartView!
     
     var currency = CryptoCurrency.btc
-    private var candlesticks = Candlesticks()
+    
+    var interactor: CandlestickChartBusinessLogic?
+    
+    override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: Bundle?) {
+        super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
+        setup()
+    }
+    
+    required init?(coder aDecoder: NSCoder) {
+        super.init(coder: aDecoder)
+        setup()
+    }
+    
+    private func setup() {
+        let viewController = self
+        let interactor = CandlestickChartInteractor()
+        let presenter = CandlestickChartPresenter()
+        viewController.interactor = interactor
+        interactor.presenter = presenter
+        presenter.viewController = viewController
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         setupNavigation()
         setupChartView()
+        interactor?.fetchChartData(forCurrency: currency)
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -63,7 +84,7 @@ class CandlestickChartViewController: UIViewController {
         chartView.xAxis.axisLineColor = .lightGray
     }
     
-    private func setChartData() {
+    private func setChartData(candlesticks: Candlesticks) {
         var candleChartDataEntries = [CandleChartDataEntry]()
         
         for (index, candlestick) in candlesticks.enumerated() {
@@ -92,6 +113,6 @@ class CandlestickChartViewController: UIViewController {
 
 extension CandlestickChartViewController: CandlestickChartDisplayLogic {
     func displayFetchedCandlesticks(_ candlesticks: Candlesticks) {
-        setChartData()
+        setChartData(candlesticks: candlesticks)
     }
 }

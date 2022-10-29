@@ -13,7 +13,9 @@ protocol CandlestickChartPresentationLogic {
 
 class CandlestickChartPresenter: CandlestickChartPresentationLogic {
     
+    weak var viewController: CandlestickChartViewController?
+    
     func presentFetchedCandlesticks(_ candlesticks: Candlesticks) {
-        // TODO: Present Fetched Candlesticks
+        viewController?.displayFetchedCandlesticks(candlesticks)
     }
 }

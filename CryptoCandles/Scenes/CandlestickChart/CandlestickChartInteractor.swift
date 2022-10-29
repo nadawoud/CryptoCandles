@@ -12,14 +12,17 @@ protocol CandlestickChartBusinessLogic {
 }
 
 class CandlestickChartInteractor: CandlestickChartBusinessLogic {
+    var presenter: CandlestickChartPresenter?
     
     func fetchChartData(forCurrency currency: CryptoCurrency) {
         
-        NetworkManager.request(endpoint: CryptoCandleEndpoint.getCandlestickChartData(currency: currency)) { (result: Result<Candlesticks, Error>) in
+        NetworkManager.request(endpoint: CryptoCandleEndpoint.getCandlestickChartData(currency: currency)) { [weak self] (result: Result<Candlesticks, Error>) in
+            guard let self = self else { return }
             
             switch result {
             case .success(let candlesticks):
                 print("Candlesticks: \(candlesticks)")
+                self.presenter?.presentFetchedCandlesticks(candlesticks)
             
             case .failure(let error):
                 print(error)
