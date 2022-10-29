@@ -26,6 +26,7 @@
 		61C198C6290DBE8D00051445 /* CurrenciesListInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61C198C5290DBE8D00051445 /* CurrenciesListInteractor.swift */; };
 		61C198C8290DBF5800051445 /* CurrenciesListPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61C198C7290DBF5800051445 /* CurrenciesListPresenter.swift */; };
 		61C198CA290DCAD300051445 /* CurrencyCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61C198C9290DCAD300051445 /* CurrencyCell.swift */; };
+		61C198CE290DDBA500051445 /* UIViewController+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61C198CD290DDBA500051445 /* UIViewController+Ext.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -49,6 +50,7 @@
 		61C198C5290DBE8D00051445 /* CurrenciesListInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrenciesListInteractor.swift; sourceTree = "<group>"; };
 		61C198C7290DBF5800051445 /* CurrenciesListPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrenciesListPresenter.swift; sourceTree = "<group>"; };
 		61C198C9290DCAD300051445 /* CurrencyCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyCell.swift; sourceTree = "<group>"; };
+		61C198CD290DDBA500051445 /* UIViewController+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Ext.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,6 +80,7 @@
 			isa = PBXGroup;
 			children = (
 				613E094E290DB29C000A7D80 /* UIView+Ext.swift */,
+				61C198CD290DDBA500051445 /* UIViewController+Ext.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -252,6 +255,7 @@
 				613E094F290DB29C000A7D80 /* UIView+Ext.swift in Sources */,
 				618F7603290325DC001D004D /* Candlesticks.swift in Sources */,
 				618F75E6290252C9001D004D /* AppDelegate.swift in Sources */,
+				61C198CE290DDBA500051445 /* UIViewController+Ext.swift in Sources */,
 				618F75E8290252C9001D004D /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

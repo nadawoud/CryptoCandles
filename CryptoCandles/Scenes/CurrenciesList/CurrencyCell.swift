@@ -9,8 +9,6 @@ import UIKit
 
 class CurrencyCell: UITableViewCell {
     
-    static let identifier =  String(describing: CurrencyCell.self)
-    
     @IBOutlet var currencyLabel: UILabel!
 
     override func awakeFromNib() {
