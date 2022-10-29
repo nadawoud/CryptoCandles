@@ -51,6 +51,7 @@ class CurrenciesListViewController: UIViewController {
     private func setupTableView() {
         tableView.delegate = self
         tableView.dataSource = self
+        tableView.tableHeaderView = UIView()
     }
 }
 
