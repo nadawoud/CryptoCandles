@@ -13,28 +13,28 @@ class NetworkManager {
     ///  - Parameters:
     ///     - endpoint: the enpoint to make the request against
     ///     - completion: closure that parses JSON into object provided
-    class func request<T: Codable>(endpoint: Endpoint, completion: @escaping (Result<T, Error>) -> Void) {
+    class func request<T: Codable>(endpoint: Endpoint, completion: @escaping (Result<T, NetworkError>) -> Void) {
         
         let task = URLSession.shared.dataTask(with: endpoint.request) { data, response, error in
             guard error == nil else {
-                completion(.failure(error!))
+                completion(.failure(.unableToComplete))
                 print(error!)
                 return
             }
             
             guard let response = response as? HTTPURLResponse, 200..<300 ~= response.statusCode else {
-                print("Response not valid")
+                completion(.failure(.invalidResponse))
                 return
             }
             
             guard let data = data else {
-                print("Data not valid")
+                completion(.failure(.invalidData))
                 return
             }
             
             let decoder = JSONDecoder()
             guard let responseObject = try? decoder.decode(T.self, from: data) else {
-                print("Decoding error")
+                completion(.failure(.decodingError))
                 return
             }
 
