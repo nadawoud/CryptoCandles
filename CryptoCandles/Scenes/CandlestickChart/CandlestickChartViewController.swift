@@ -126,17 +126,20 @@ class CandlestickChartViewController: UIViewController {
             switch self.state {
             case .ready(let candlesticks):
                 self.stateView.isHidden = true
+                self.activityIndicatorView.stopAnimating()
                 self.setChartData(candlesticks: candlesticks)
                 
             case .loading:
                 self.stateView.isHidden = false
                 self.activityIndicatorView.isHidden = false
+                self.activityIndicatorView.startAnimating()
                 self.errorImageView.isHidden = true
                 self.messageLabel.text = "Loading..."
                 
             case .error:
                 self.stateView.isHidden = false
                 self.activityIndicatorView.isHidden = true
+                self.activityIndicatorView.stopAnimating()
                 self.errorImageView.isHidden = false
                 self.messageLabel.text = """
                                         Something went wrong!
