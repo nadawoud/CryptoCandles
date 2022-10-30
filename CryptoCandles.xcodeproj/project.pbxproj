@@ -9,6 +9,9 @@
 /* Begin PBXBuildFile section */
 		613E0945290D7F2F000A7D80 /* CandlestickChartInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 613E0944290D7F2F000A7D80 /* CandlestickChartInteractor.swift */; };
 		613E0947290D829D000A7D80 /* CandlestickChartPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 613E0946290D829D000A7D80 /* CandlestickChartPresenter.swift */; };
+		613E094A290DAF54000A7D80 /* CurrenciesListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 613E0949290DAF54000A7D80 /* CurrenciesListViewController.swift */; };
+		613E094C290DB05F000A7D80 /* CryptoCurrency.swift in Sources */ = {isa = PBXBuildFile; fileRef = 613E094B290DB05F000A7D80 /* CryptoCurrency.swift */; };
+		613E094F290DB29C000A7D80 /* UIView+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 613E094E290DB29C000A7D80 /* UIView+Ext.swift */; };
 		618F75E6290252C9001D004D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 618F75E5290252C9001D004D /* AppDelegate.swift */; };
 		618F75E8290252C9001D004D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 618F75E7290252C9001D004D /* SceneDelegate.swift */; };
 		618F75EA290252C9001D004D /* CandlestickChartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 618F75E9290252C9001D004D /* CandlestickChartViewController.swift */; };
@@ -20,11 +23,18 @@
 		618F7600290257C6001D004D /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 618F75FF290257C6001D004D /* NetworkManager.swift */; };
 		618F7603290325DC001D004D /* Candlesticks.swift in Sources */ = {isa = PBXBuildFile; fileRef = 618F7602290325DC001D004D /* Candlesticks.swift */; };
 		618F76062903546B001D004D /* Charts in Frameworks */ = {isa = PBXBuildFile; productRef = 618F76052903546B001D004D /* Charts */; };
+		61C198C6290DBE8D00051445 /* CurrenciesListInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61C198C5290DBE8D00051445 /* CurrenciesListInteractor.swift */; };
+		61C198C8290DBF5800051445 /* CurrenciesListPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61C198C7290DBF5800051445 /* CurrenciesListPresenter.swift */; };
+		61C198CA290DCAD300051445 /* CurrencyCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61C198C9290DCAD300051445 /* CurrencyCell.swift */; };
+		61C198CE290DDBA500051445 /* UIViewController+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61C198CD290DDBA500051445 /* UIViewController+Ext.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		613E0944290D7F2F000A7D80 /* CandlestickChartInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CandlestickChartInteractor.swift; sourceTree = "<group>"; };
 		613E0946290D829D000A7D80 /* CandlestickChartPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CandlestickChartPresenter.swift; sourceTree = "<group>"; };
+		613E0949290DAF54000A7D80 /* CurrenciesListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrenciesListViewController.swift; sourceTree = "<group>"; };
+		613E094B290DB05F000A7D80 /* CryptoCurrency.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CryptoCurrency.swift; sourceTree = "<group>"; };
+		613E094E290DB29C000A7D80 /* UIView+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Ext.swift"; sourceTree = "<group>"; };
 		618F75E2290252C9001D004D /* CryptoCandles.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CryptoCandles.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		618F75E5290252C9001D004D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		618F75E7290252C9001D004D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -37,6 +47,10 @@
 		618F75FD290256B6001D004D /* CryptoCandleEndpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CryptoCandleEndpoint.swift; sourceTree = "<group>"; };
 		618F75FF290257C6001D004D /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 		618F7602290325DC001D004D /* Candlesticks.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Candlesticks.swift; sourceTree = "<group>"; };
+		61C198C5290DBE8D00051445 /* CurrenciesListInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrenciesListInteractor.swift; sourceTree = "<group>"; };
+		61C198C7290DBF5800051445 /* CurrenciesListPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrenciesListPresenter.swift; sourceTree = "<group>"; };
+		61C198C9290DCAD300051445 /* CurrencyCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyCell.swift; sourceTree = "<group>"; };
+		61C198CD290DDBA500051445 /* UIViewController+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Ext.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,6 +65,26 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		613E0948290DAF08000A7D80 /* CurrenciesList */ = {
+			isa = PBXGroup;
+			children = (
+				61C198C9290DCAD300051445 /* CurrencyCell.swift */,
+				613E0949290DAF54000A7D80 /* CurrenciesListViewController.swift */,
+				61C198C5290DBE8D00051445 /* CurrenciesListInteractor.swift */,
+				61C198C7290DBF5800051445 /* CurrenciesListPresenter.swift */,
+			);
+			path = CurrenciesList;
+			sourceTree = "<group>";
+		};
+		613E094D290DB285000A7D80 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				613E094E290DB29C000A7D80 /* UIView+Ext.swift */,
+				61C198CD290DDBA500051445 /* UIViewController+Ext.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
 		618F75D9290252C9001D004D = {
 			isa = PBXGroup;
 			children = (
@@ -71,6 +105,7 @@
 			isa = PBXGroup;
 			children = (
 				618F75F92902537B001D004D /* Supporting Files */,
+				613E094D290DB285000A7D80 /* Extensions */,
 				618F7601290325CB001D004D /* Models */,
 				618F75FA290255DA001D004D /* Network */,
 				61DFE4AF290C94F500FF1A3A /* Scenes */,
@@ -104,6 +139,7 @@
 			isa = PBXGroup;
 			children = (
 				618F7602290325DC001D004D /* Candlesticks.swift */,
+				613E094B290DB05F000A7D80 /* CryptoCurrency.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -112,6 +148,7 @@
 			isa = PBXGroup;
 			children = (
 				618F75EB290252C9001D004D /* Main.storyboard */,
+				613E0948290DAF08000A7D80 /* CurrenciesList */,
 				61DFE4B0290C94FF00FF1A3A /* CandlestickChart */,
 			);
 			path = Scenes;
@@ -204,14 +241,21 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				61C198CA290DCAD300051445 /* CurrencyCell.swift in Sources */,
 				618F7600290257C6001D004D /* NetworkManager.swift in Sources */,
 				618F75FC29025603001D004D /* Endpoint.swift in Sources */,
 				613E0945290D7F2F000A7D80 /* CandlestickChartInteractor.swift in Sources */,
 				618F75FE290256B6001D004D /* CryptoCandleEndpoint.swift in Sources */,
 				618F75EA290252C9001D004D /* CandlestickChartViewController.swift in Sources */,
+				613E094A290DAF54000A7D80 /* CurrenciesListViewController.swift in Sources */,
+				613E094C290DB05F000A7D80 /* CryptoCurrency.swift in Sources */,
+				61C198C8290DBF5800051445 /* CurrenciesListPresenter.swift in Sources */,
+				61C198C6290DBE8D00051445 /* CurrenciesListInteractor.swift in Sources */,
 				613E0947290D829D000A7D80 /* CandlestickChartPresenter.swift in Sources */,
+				613E094F290DB29C000A7D80 /* UIView+Ext.swift in Sources */,
 				618F7603290325DC001D004D /* Candlesticks.swift in Sources */,
 				618F75E6290252C9001D004D /* AppDelegate.swift in Sources */,
+				61C198CE290DDBA500051445 /* UIViewController+Ext.swift in Sources */,
 				618F75E8290252C9001D004D /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

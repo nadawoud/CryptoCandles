@@ -12,7 +12,7 @@ protocol CandlestickChartBusinessLogic {
 }
 
 class CandlestickChartInteractor: CandlestickChartBusinessLogic {
-    var presenter: CandlestickChartPresenter?
+    var presenter: CandlestickChartPresentationLogic?
     
     func fetchChartData(forCurrency currency: CryptoCurrency) {
         

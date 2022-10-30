@@ -7,12 +7,6 @@
 
 import Foundation
 
-enum CryptoCurrency: String {
-    case btc = "BTCUSDT"
-    case ltc = "LTCUSDT"
-    case eth = "ETHUSDT"
-}
-
 enum CryptoCandleEndpoint: Endpoint {
     case getCandlestickChartData(currency: CryptoCurrency)
     
