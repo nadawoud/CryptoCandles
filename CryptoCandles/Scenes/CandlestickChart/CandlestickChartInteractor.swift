@@ -16,7 +16,7 @@ class CandlestickChartInteractor: CandlestickChartBusinessLogic {
     
     func fetchChartData(forCurrency currency: CryptoCurrency) {
         
-        NetworkManager.request(endpoint: CryptoCandleEndpoint.getCandlestickChartData(currency: currency)) { [weak self] (result: Result<Candlesticks, Error>) in
+        NetworkManager.request(endpoint: CryptoCandleEndpoint.getCandlestickChartData(currency: currency)) { [weak self] (result: Result<Candlesticks, NetworkError>) in
             guard let self = self else { return }
             
             switch result {
@@ -26,6 +26,7 @@ class CandlestickChartInteractor: CandlestickChartBusinessLogic {
             
             case .failure(let error):
                 print(error)
+                self.presenter?.presentFetchingError()
             }
         }
     }

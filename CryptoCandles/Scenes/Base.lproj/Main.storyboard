@@ -145,18 +145,83 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </view>
+                            <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9Uj-SU-Ffa">
+                                <rect key="frame" x="0.0" y="47" width="390" height="763"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sm4-Qw-vwE">
+                                        <rect key="frame" x="50" y="200" width="290" height="200"/>
+                                        <subviews>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="zpr-Zv-KLZ">
+                                                <rect key="frame" x="20" y="-14" width="250" height="228"/>
+                                                <subviews>
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="exclamationmark.triangle" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="Pdx-zs-8kM">
+                                                        <rect key="frame" x="75" y="1.3333333333333357" width="100" height="97.666666666666657"/>
+                                                        <color key="tintColor" name="ChartBackground"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" constant="100" id="5UI-1c-geq"/>
+                                                            <constraint firstAttribute="height" constant="100" id="M8v-8E-HD7"/>
+                                                        </constraints>
+                                                    </imageView>
+                                                    <activityIndicatorView opaque="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="large" translatesAutoresizingMaskIntoConstraints="NO" id="Qqt-KH-bqo">
+                                                        <rect key="frame" x="95" y="110" width="60" height="60"/>
+                                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" constant="60" id="BdL-bO-ohJ"/>
+                                                            <constraint firstAttribute="height" constant="60" id="hcW-cM-Stx"/>
+                                                        </constraints>
+                                                        <color key="color" name="ChartBackground"/>
+                                                    </activityIndicatorView>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Something went wrong! Try again later." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lRZ-VO-QiS">
+                                                        <rect key="frame" x="2.6666666666666714" y="180" width="244.66666666666663" height="48"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                                        <color key="textColor" name="ChartBackground"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                            </stackView>
+                                        </subviews>
+                                        <color key="backgroundColor" name="AccentColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="200" id="4Tj-XO-Red"/>
+                                            <constraint firstItem="zpr-Zv-KLZ" firstAttribute="centerY" secondItem="sm4-Qw-vwE" secondAttribute="centerY" id="CbQ-ud-CgR"/>
+                                            <constraint firstAttribute="trailing" secondItem="zpr-Zv-KLZ" secondAttribute="trailing" constant="20" id="lef-OR-czv"/>
+                                            <constraint firstItem="zpr-Zv-KLZ" firstAttribute="centerX" secondItem="sm4-Qw-vwE" secondAttribute="centerX" id="raE-IA-iPT"/>
+                                            <constraint firstItem="zpr-Zv-KLZ" firstAttribute="leading" secondItem="sm4-Qw-vwE" secondAttribute="leading" constant="20" id="sYt-OY-Lnn"/>
+                                        </constraints>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="25"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </view>
+                                </subviews>
+                                <color key="backgroundColor" red="0.13725490196078433" green="0.13725490196078433" blue="0.13725490196078433" alpha="0.80000000000000004" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstItem="sm4-Qw-vwE" firstAttribute="top" secondItem="9Uj-SU-Ffa" secondAttribute="top" constant="200" id="O8q-D9-Dka"/>
+                                    <constraint firstAttribute="trailing" secondItem="sm4-Qw-vwE" secondAttribute="trailing" constant="50" id="duF-hF-N9A"/>
+                                    <constraint firstItem="sm4-Qw-vwE" firstAttribute="leading" secondItem="9Uj-SU-Ffa" secondAttribute="leading" constant="50" id="qAA-P3-C1j"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" name="Background"/>
                         <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="9Uj-SU-Ffa" secondAttribute="bottom" id="2mD-O9-LFz"/>
+                            <constraint firstItem="9Uj-SU-Ffa" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="4pU-pn-Fjg"/>
                             <constraint firstItem="rx6-NF-swo" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="5IS-JR-h1w"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="9Uj-SU-Ffa" secondAttribute="trailing" id="L9J-6p-eMq"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="rx6-NF-swo" secondAttribute="trailing" constant="20" id="WFs-Jt-AVN"/>
                             <constraint firstItem="rx6-NF-swo" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="30" id="sx3-eU-PdI"/>
+                            <constraint firstItem="9Uj-SU-Ffa" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="uA2-Rh-h6s"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Chart" id="SqX-Hx-f2K"/>
                     <connections>
+                        <outlet property="activityIndicatorView" destination="Qqt-KH-bqo" id="vCo-mp-w5f"/>
                         <outlet property="chartView" destination="pC0-SF-IbM" id="LgX-Lf-V6o"/>
+                        <outlet property="errorImageView" destination="Pdx-zs-8kM" id="gtc-6H-EUH"/>
+                        <outlet property="messageLabel" destination="lRZ-VO-QiS" id="Ou7-TP-EEk"/>
+                        <outlet property="stateView" destination="9Uj-SU-Ffa" id="0An-Sc-wJh"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -166,6 +231,7 @@
     </scenes>
     <resources>
         <image name="chevron.right" catalog="system" width="97" height="128"/>
+        <image name="exclamationmark.triangle" catalog="system" width="128" height="109"/>
         <namedColor name="AccentColor">
             <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
         </namedColor>
