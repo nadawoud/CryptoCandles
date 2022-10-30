@@ -9,6 +9,7 @@ import Foundation
 
 protocol CandlestickChartPresentationLogic {
     func presentFetchedCandlesticks(_ candlesticks: Candlesticks)
+    func presentFetchingError()
 }
 
 class CandlestickChartPresenter: CandlestickChartPresentationLogic {
@@ -17,5 +18,9 @@ class CandlestickChartPresenter: CandlestickChartPresentationLogic {
     
     func presentFetchedCandlesticks(_ candlesticks: Candlesticks) {
         viewController?.displayFetchedCandlesticks(candlesticks)
+    }
+    
+    func presentFetchingError() {
+        viewController?.displayFetchingError()
     }
 }

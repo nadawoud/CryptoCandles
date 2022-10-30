@@ -10,15 +10,24 @@ import Charts
 
 protocol CandlestickChartDisplayLogic: AnyObject {
     func displayFetchedCandlesticks(_ candlesticks: Candlesticks)
+    func displayFetchingError()
 }
 
 class CandlestickChartViewController: UIViewController {
     
     @IBOutlet var chartView: CandleStickChartView!
+    @IBOutlet var stateView: UIView!
+    @IBOutlet var activityIndicatorView: UIActivityIndicatorView!
+    @IBOutlet var errorImageView: UIImageView!
+    @IBOutlet var messageLabel: UILabel!
+    
     
     var currency = CryptoCurrency.btc
+    private var interactor: CandlestickChartBusinessLogic?
+    private var state: State = .loading {
+        didSet { updateViewState() }
+    }
     
-    var interactor: CandlestickChartBusinessLogic?
     
     override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: Bundle?) {
         super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
@@ -43,6 +52,7 @@ class CandlestickChartViewController: UIViewController {
         super.viewDidLoad()
         setupNavigation()
         setupChartView()
+        state = .loading
         interactor?.fetchChartData(forCurrency: currency)
     }
     
@@ -109,10 +119,51 @@ class CandlestickChartViewController: UIViewController {
         chartView.data = data
         chartView.setVisibleXRangeMaximum(25)
     }
+    
+    private func updateViewState() {
+        DispatchQueue.main.async { [weak self] in
+            guard let self = self else { return }
+            switch self.state {
+            case .ready(let candlesticks):
+                self.stateView.isHidden = true
+                self.activityIndicatorView.stopAnimating()
+                self.setChartData(candlesticks: candlesticks)
+                
+            case .loading:
+                self.stateView.isHidden = false
+                self.activityIndicatorView.isHidden = false
+                self.activityIndicatorView.startAnimating()
+                self.errorImageView.isHidden = true
+                self.messageLabel.text = "Loading..."
+                
+            case .error:
+                self.stateView.isHidden = false
+                self.activityIndicatorView.isHidden = true
+                self.activityIndicatorView.stopAnimating()
+                self.errorImageView.isHidden = false
+                self.messageLabel.text = """
+                                        Something went wrong!
+                                        Try again later.
+                                        """
+            }
+        }
+    }
 }
 
 extension CandlestickChartViewController: CandlestickChartDisplayLogic {
     func displayFetchedCandlesticks(_ candlesticks: Candlesticks) {
-        setChartData(candlesticks: candlesticks)
+        state = .ready(candlesticks)
+    }
+    
+    func displayFetchingError() {
+        state = .error
+    }
+}
+
+extension CandlestickChartViewController {
+    enum State {
+        case loading
+        case ready(Candlesticks)
+        case error
     }
 }
