@@ -7,13 +7,17 @@
 
 import Foundation
 
-class NetworkManager {
+protocol NetworkService {
+    func request<T: Codable>(endpoint: Endpoint, completion: @escaping (Result<T, NetworkError>) -> Void)
+}
+
+class NetworkManager: NetworkService {
     
     /// Excutes the network call and decodes the  JSON response into Codable object provided
     ///  - Parameters:
     ///     - endpoint: the enpoint to make the request against
     ///     - completion: closure that parses JSON into object provided
-    class func request<T: Codable>(endpoint: Endpoint, completion: @escaping (Result<T, NetworkError>) -> Void) {
+    func request<T: Codable>(endpoint: Endpoint, completion: @escaping (Result<T, NetworkError>) -> Void) {
         
         let task = URLSession.shared.dataTask(with: endpoint.request) { data, response, error in
             guard error == nil else {
