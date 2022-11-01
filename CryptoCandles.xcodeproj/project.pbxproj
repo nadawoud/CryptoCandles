@@ -28,8 +28,19 @@
 		61C198CA290DCAD300051445 /* CurrencyCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61C198C9290DCAD300051445 /* CurrencyCell.swift */; };
 		61C198CE290DDBA500051445 /* UIViewController+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61C198CD290DDBA500051445 /* UIViewController+Ext.swift */; };
 		61C198D0290E104B00051445 /* NetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61C198CF290E104B00051445 /* NetworkError.swift */; };
+		61C198D8290F135D00051445 /* CryptoCandlesServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61C198D7290F135D00051445 /* CryptoCandlesServiceTests.swift */; };
 		61C198DF2911118E00051445 /* NetworkServiceMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61C198DE2911118E00051445 /* NetworkServiceMock.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		61C198D9290F135D00051445 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 618F75DA290252C9001D004D /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 618F75E1290252C9001D004D;
+			remoteInfo = CryptoCandles;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		613E0944290D7F2F000A7D80 /* CandlestickChartInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CandlestickChartInteractor.swift; sourceTree = "<group>"; };
@@ -54,6 +65,8 @@
 		61C198C9290DCAD300051445 /* CurrencyCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyCell.swift; sourceTree = "<group>"; };
 		61C198CD290DDBA500051445 /* UIViewController+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Ext.swift"; sourceTree = "<group>"; };
 		61C198CF290E104B00051445 /* NetworkError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkError.swift; sourceTree = "<group>"; };
+		61C198D5290F135D00051445 /* CryptoCandlesTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CryptoCandlesTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		61C198D7290F135D00051445 /* CryptoCandlesServiceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CryptoCandlesServiceTests.swift; sourceTree = "<group>"; };
 		61C198DE2911118E00051445 /* NetworkServiceMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkServiceMock.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -63,6 +76,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				618F76062903546B001D004D /* Charts in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		61C198D2290F135D00051445 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -93,6 +113,7 @@
 			isa = PBXGroup;
 			children = (
 				618F75E4290252C9001D004D /* CryptoCandles */,
+				61C198D6290F135D00051445 /* CryptoCandlesTests */,
 				618F75E3290252C9001D004D /* Products */,
 			);
 			sourceTree = "<group>";
@@ -101,6 +122,7 @@
 			isa = PBXGroup;
 			children = (
 				618F75E2290252C9001D004D /* CryptoCandles.app */,
+				61C198D5290F135D00051445 /* CryptoCandlesTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -149,6 +171,15 @@
 			path = Models;
 			sourceTree = "<group>";
 		};
+		61C198D6290F135D00051445 /* CryptoCandlesTests */ = {
+			isa = PBXGroup;
+			children = (
+				61C198DE2911118E00051445 /* NetworkServiceMock.swift */,
+				61C198D7290F135D00051445 /* CryptoCandlesServiceTests.swift */,
+			);
+			path = CryptoCandlesTests;
+			sourceTree = "<group>";
+		};
 		61DFE4AF290C94F500FF1A3A /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
@@ -192,6 +223,24 @@
 			productReference = 618F75E2290252C9001D004D /* CryptoCandles.app */;
 			productType = "com.apple.product-type.application";
 		};
+		61C198D4290F135D00051445 /* CryptoCandlesTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 61C198DD290F135D00051445 /* Build configuration list for PBXNativeTarget "CryptoCandlesTests" */;
+			buildPhases = (
+				61C198D1290F135D00051445 /* Sources */,
+				61C198D2290F135D00051445 /* Frameworks */,
+				61C198D3290F135D00051445 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				61C198DA290F135D00051445 /* PBXTargetDependency */,
+			);
+			name = CryptoCandlesTests;
+			productName = CryptoCandlesTests;
+			productReference = 61C198D5290F135D00051445 /* CryptoCandlesTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -204,6 +253,10 @@
 				TargetAttributes = {
 					618F75E1290252C9001D004D = {
 						CreatedOnToolsVersion = 14.0.1;
+					};
+					61C198D4290F135D00051445 = {
+						CreatedOnToolsVersion = 14.0.1;
+						TestTargetID = 618F75E1290252C9001D004D;
 					};
 				};
 			};
@@ -224,6 +277,7 @@
 			projectRoot = "";
 			targets = (
 				618F75E1290252C9001D004D /* CryptoCandles */,
+				61C198D4290F135D00051445 /* CryptoCandlesTests */,
 			);
 		};
 /* End PBXProject section */
@@ -236,6 +290,13 @@
 				618F75F2290252C9001D004D /* LaunchScreen.storyboard in Resources */,
 				618F75EF290252C9001D004D /* Assets.xcassets in Resources */,
 				618F75ED290252C9001D004D /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		61C198D3290F135D00051445 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -266,7 +327,24 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		61C198D1290F135D00051445 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				61C198DF2911118E00051445 /* NetworkServiceMock.swift in Sources */,
+				61C198D8290F135D00051445 /* CryptoCandlesServiceTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		61C198DA290F135D00051445 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 618F75E1290252C9001D004D /* CryptoCandles */;
+			targetProxy = 61C198D9290F135D00051445 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		618F75EB290252C9001D004D /* Main.storyboard */ = {
@@ -458,6 +536,42 @@
 			};
 			name = Release;
 		};
+		61C198DB290F135D00051445 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 8WWJWU7869;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.nadawoud.CryptoCandlesTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CryptoCandles.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/CryptoCandles";
+			};
+			name = Debug;
+		};
+		61C198DC290F135D00051445 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 8WWJWU7869;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.nadawoud.CryptoCandlesTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CryptoCandles.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/CryptoCandles";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -475,6 +589,15 @@
 			buildConfigurations = (
 				618F75F7290252C9001D004D /* Debug */,
 				618F75F8290252C9001D004D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		61C198DD290F135D00051445 /* Build configuration list for PBXNativeTarget "CryptoCandlesTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				61C198DB290F135D00051445 /* Debug */,
+				61C198DC290F135D00051445 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
