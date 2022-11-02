@@ -42,6 +42,7 @@ class CurrenciesListViewController: UIViewController {
         super.viewDidLoad()
         interactor?.getCurrencies()
         setupTableView()
+        FirebaseManager.shared.logFirebaseAnalyticsEvent(title: "CurrenciesList Screen", description: "CurrenciesList Screen did load.")
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -69,6 +70,7 @@ extension CurrenciesListViewController: UITableViewDelegate, UITableViewDataSour
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         guard let chartViewController = storyboard?.instantiateViewController(withIdentifier: CandlestickChartViewController.identifier) as? CandlestickChartViewController else { return }
         chartViewController.currency = currencies[indexPath.item]
+        FirebaseManager.shared.logFirebaseAnalyticsEvent(title: "Currency Selected", description: "Did select a currency from CurrenciesList Screen.")
         navigationController?.pushViewController(chartViewController, animated: true)
     }
 }

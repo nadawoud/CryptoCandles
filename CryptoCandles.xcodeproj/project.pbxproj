@@ -30,6 +30,10 @@
 		61C198D0290E104B00051445 /* NetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61C198CF290E104B00051445 /* NetworkError.swift */; };
 		61C198D8290F135D00051445 /* CryptoCandlesServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61C198D7290F135D00051445 /* CryptoCandlesServiceTests.swift */; };
 		61C198DF2911118E00051445 /* NetworkServiceMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61C198DE2911118E00051445 /* NetworkServiceMock.swift */; };
+		61C198E3291124E200051445 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 61C198E2291124E200051445 /* GoogleService-Info.plist */; };
+		61C198E62911292300051445 /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = 61C198E52911292300051445 /* FirebaseAnalytics */; };
+		61C198E82911292300051445 /* FirebaseCrashlytics in Frameworks */ = {isa = PBXBuildFile; productRef = 61C198E72911292300051445 /* FirebaseCrashlytics */; };
+		61C198EA2913168400051445 /* FirebaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61C198E92913168400051445 /* FirebaseManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -68,6 +72,8 @@
 		61C198D5290F135D00051445 /* CryptoCandlesTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CryptoCandlesTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		61C198D7290F135D00051445 /* CryptoCandlesServiceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CryptoCandlesServiceTests.swift; sourceTree = "<group>"; };
 		61C198DE2911118E00051445 /* NetworkServiceMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkServiceMock.swift; sourceTree = "<group>"; };
+		61C198E2291124E200051445 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		61C198E92913168400051445 /* FirebaseManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -75,6 +81,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				61C198E82911292300051445 /* FirebaseCrashlytics in Frameworks */,
+				61C198E62911292300051445 /* FirebaseAnalytics in Frameworks */,
 				618F76062903546B001D004D /* Charts in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -133,9 +141,11 @@
 				618F75F92902537B001D004D /* Supporting Files */,
 				613E094D290DB285000A7D80 /* Extensions */,
 				618F7601290325CB001D004D /* Models */,
+				61C198EB2913168F00051445 /* Utilities */,
 				618F75FA290255DA001D004D /* Network */,
 				61DFE4AF290C94F500FF1A3A /* Scenes */,
 				618F75F3290252C9001D004D /* Info.plist */,
+				61C198E2291124E200051445 /* GoogleService-Info.plist */,
 			);
 			path = CryptoCandles;
 			sourceTree = "<group>";
@@ -180,6 +190,14 @@
 			path = CryptoCandlesTests;
 			sourceTree = "<group>";
 		};
+		61C198EB2913168F00051445 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				61C198E92913168400051445 /* FirebaseManager.swift */,
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
 		61DFE4AF290C94F500FF1A3A /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
@@ -210,6 +228,7 @@
 				618F75DE290252C9001D004D /* Sources */,
 				618F75DF290252C9001D004D /* Frameworks */,
 				618F75E0290252C9001D004D /* Resources */,
+				61C198EC291319E400051445 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -218,6 +237,8 @@
 			name = CryptoCandles;
 			packageProductDependencies = (
 				618F76052903546B001D004D /* Charts */,
+				61C198E52911292300051445 /* FirebaseAnalytics */,
+				61C198E72911292300051445 /* FirebaseCrashlytics */,
 			);
 			productName = CryptoCandles;
 			productReference = 618F75E2290252C9001D004D /* CryptoCandles.app */;
@@ -271,6 +292,7 @@
 			mainGroup = 618F75D9290252C9001D004D;
 			packageReferences = (
 				618F76042903546B001D004D /* XCRemoteSwiftPackageReference "Charts" */,
+				61C198E42911292300051445 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
 			);
 			productRefGroup = 618F75E3290252C9001D004D /* Products */;
 			projectDirPath = "";
@@ -288,6 +310,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				618F75F2290252C9001D004D /* LaunchScreen.storyboard in Resources */,
+				61C198E3291124E200051445 /* GoogleService-Info.plist in Resources */,
 				618F75EF290252C9001D004D /* Assets.xcassets in Resources */,
 				618F75ED290252C9001D004D /* Main.storyboard in Resources */,
 			);
@@ -301,6 +324,28 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		61C198EC291319E400051445 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${DWARF_DSYM_FOLDER_PATH}/${DWARF_DSYM_FILE_NAME}/Contents/Resources/DWARF/${TARGET_NAME}",
+				"$(SRCROOT)/$(BUILT_PRODUCTS_DIR)/$(INFOPLIST_PATH)",
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\n\"${BUILD_DIR%/Build/*}/SourcePackages/checkouts/firebase-ios-sdk/Crashlytics/run\"\n";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		618F75DE290252C9001D004D /* Sources */ = {
@@ -319,6 +364,7 @@
 				61C198C8290DBF5800051445 /* CurrenciesListPresenter.swift in Sources */,
 				61C198C6290DBE8D00051445 /* CurrenciesListInteractor.swift in Sources */,
 				613E0947290D829D000A7D80 /* CandlestickChartPresenter.swift in Sources */,
+				61C198EA2913168400051445 /* FirebaseManager.swift in Sources */,
 				613E094F290DB29C000A7D80 /* UIView+Ext.swift in Sources */,
 				618F7603290325DC001D004D /* Candlesticks.swift in Sources */,
 				618F75E6290252C9001D004D /* AppDelegate.swift in Sources */,
@@ -487,6 +533,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DEVELOPMENT_TEAM = 8WWJWU7869;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = CryptoCandles/Info.plist;
@@ -613,6 +660,14 @@
 				minimumVersion = 4.1.0;
 			};
 		};
+		61C198E42911292300051445 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/firebase/firebase-ios-sdk";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 9.0.0;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -620,6 +675,16 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 618F76042903546B001D004D /* XCRemoteSwiftPackageReference "Charts" */;
 			productName = Charts;
+		};
+		61C198E52911292300051445 /* FirebaseAnalytics */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 61C198E42911292300051445 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAnalytics;
+		};
+		61C198E72911292300051445 /* FirebaseCrashlytics */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 61C198E42911292300051445 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseCrashlytics;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
