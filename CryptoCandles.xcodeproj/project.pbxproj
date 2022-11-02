@@ -33,6 +33,7 @@
 		61C198E3291124E200051445 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 61C198E2291124E200051445 /* GoogleService-Info.plist */; };
 		61C198E62911292300051445 /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = 61C198E52911292300051445 /* FirebaseAnalytics */; };
 		61C198E82911292300051445 /* FirebaseCrashlytics in Frameworks */ = {isa = PBXBuildFile; productRef = 61C198E72911292300051445 /* FirebaseCrashlytics */; };
+		61C198EA2913168400051445 /* FirebaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61C198E92913168400051445 /* FirebaseManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -72,6 +73,7 @@
 		61C198D7290F135D00051445 /* CryptoCandlesServiceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CryptoCandlesServiceTests.swift; sourceTree = "<group>"; };
 		61C198DE2911118E00051445 /* NetworkServiceMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkServiceMock.swift; sourceTree = "<group>"; };
 		61C198E2291124E200051445 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		61C198E92913168400051445 /* FirebaseManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -139,6 +141,7 @@
 				618F75F92902537B001D004D /* Supporting Files */,
 				613E094D290DB285000A7D80 /* Extensions */,
 				618F7601290325CB001D004D /* Models */,
+				61C198EB2913168F00051445 /* Utilities */,
 				618F75FA290255DA001D004D /* Network */,
 				61DFE4AF290C94F500FF1A3A /* Scenes */,
 				618F75F3290252C9001D004D /* Info.plist */,
@@ -185,6 +188,14 @@
 				61C198D7290F135D00051445 /* CryptoCandlesServiceTests.swift */,
 			);
 			path = CryptoCandlesTests;
+			sourceTree = "<group>";
+		};
+		61C198EB2913168F00051445 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				61C198E92913168400051445 /* FirebaseManager.swift */,
+			);
+			path = Utilities;
 			sourceTree = "<group>";
 		};
 		61DFE4AF290C94F500FF1A3A /* Scenes */ = {
@@ -353,6 +364,7 @@
 				61C198C8290DBF5800051445 /* CurrenciesListPresenter.swift in Sources */,
 				61C198C6290DBE8D00051445 /* CurrenciesListInteractor.swift in Sources */,
 				613E0947290D829D000A7D80 /* CandlestickChartPresenter.swift in Sources */,
+				61C198EA2913168400051445 /* FirebaseManager.swift in Sources */,
 				613E094F290DB29C000A7D80 /* UIView+Ext.swift in Sources */,
 				618F7603290325DC001D004D /* Candlesticks.swift in Sources */,
 				618F75E6290252C9001D004D /* AppDelegate.swift in Sources */,
