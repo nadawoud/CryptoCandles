@@ -54,6 +54,7 @@ class CandlestickChartViewController: UIViewController {
         setupChartView()
         state = .loading
         interactor?.fetchChartData(forCurrency: currency)
+        FirebaseManager.shared.logFirebaseAnalyticsEvent(title: "ChartView Screen", description: "ChartView Screen did load.")
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -128,6 +129,7 @@ class CandlestickChartViewController: UIViewController {
                 self.stateView.isHidden = true
                 self.activityIndicatorView.stopAnimating()
                 self.setChartData(candlesticks: candlesticks)
+                FirebaseManager.shared.logFirebaseAnalyticsEvent(title: "\(self.currency.rawValue) Candlesticks Data Fetched", description: "Candlesticks data fetchd and rendered successfully")
                 
             case .loading:
                 self.stateView.isHidden = false
@@ -135,6 +137,7 @@ class CandlestickChartViewController: UIViewController {
                 self.activityIndicatorView.startAnimating()
                 self.errorImageView.isHidden = true
                 self.messageLabel.text = "Loading..."
+                FirebaseManager.shared.logFirebaseAnalyticsEvent(title: "\(self.currency.rawValue) Candlesticks Data Being Fetched", description: "The view is loading while the candlesticks data is being fetchd.")
                 
             case .error:
                 self.stateView.isHidden = false
@@ -145,6 +148,7 @@ class CandlestickChartViewController: UIViewController {
                                         Something went wrong!
                                         Try again later.
                                         """
+                FirebaseManager.shared.logFirebaseAnalyticsEvent(title: "Error Fetching \(self.currency.rawValue) Candlesticks", description: "Candlesticks data couldn't be fetchd!")
             }
         }
     }
