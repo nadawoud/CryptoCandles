@@ -19,8 +19,4 @@
  ## Dependencies
 
  - <a href="https://github.com/danielgindi/Charts">Charts</a>
- 
- ## 🛠 In Progress
-
-- Unit tests
-- Log events, errors, and crashes using Firebase Analytics
+ - <a href="https://github.com/firebase/firebase-ios-sdk">Firebase</a>
